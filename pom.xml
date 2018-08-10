@@ -10,13 +10,14 @@
   <dependencies>
   
 	
-	<dependency>
+	<!-- <dependency>
 	    <groupId>com.googlecode.json-simple</groupId>
 	    <artifactId>json-simple</artifactId>
 	    <version>1.1</version>
-	</dependency>
+	</dependency> -->
   
-	  <!-- Adding NEW JARS -->
+  
+ <!-- Adding NEW JARS -->
 <dependency>
     <groupId>commons-collections</groupId>
     <artifactId>commons-collections</artifactId>
@@ -40,12 +41,12 @@
     <artifactId>commons-logging</artifactId>
     <version>1.1.1</version>
 </dependency>
- 	  <dependency>
+ 	 <!--  <dependency>
     <groupId>com.h2database</groupId>
     <artifactId>h2</artifactId>
     <version>1.3.173.redhat-2</version>
     <scope>test</scope>
-</dependency>
+</dependency> -->
 	  
 	  <dependency>
     <groupId>org.apache.httpcomponents</groupId>
@@ -145,6 +146,7 @@
     <version>1.7</version>
 </dependency>
  	  <!-- END - NEW JARS -->
+
   
     <!-- <dependency>
       <groupId>Claims</groupId>
