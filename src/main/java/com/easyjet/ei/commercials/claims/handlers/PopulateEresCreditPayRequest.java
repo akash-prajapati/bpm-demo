@@ -31,7 +31,7 @@ public class PopulateEresCreditPayRequest implements WorkItemHandler{
 	@Override
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
 		
-		HashMap<String, Object> map = new HashMap<>();
+		HashMap<String, Object> map = new HashMap<String, Object>();
 		try {
 			Claims claim_obj = (Claims) arg0.getParameter("claim_obj");
 			float amount = (Float) arg0.getParameter("amount");		

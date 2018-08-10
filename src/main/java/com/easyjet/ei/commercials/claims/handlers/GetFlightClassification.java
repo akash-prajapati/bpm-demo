@@ -32,7 +32,7 @@ public class GetFlightClassification implements WorkItemHandler {
 			
 			 String classification = getClassification(disruption_reason);
 			
-			Map<String, Object> map = new HashMap<>();
+			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("classification", classification);
 			
 			arg1.completeWorkItem(arg0.getId(), map);

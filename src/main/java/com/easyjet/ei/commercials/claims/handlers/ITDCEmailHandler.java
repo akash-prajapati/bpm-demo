@@ -39,7 +39,16 @@ public class ITDCEmailHandler implements WorkItemHandler {
 			
 			
 			
-		} catch (IOException | MessagingException | ParseException  | NullPointerException e) {
+		} catch (IOException  e) {
+			logger.debug("Error while sending ITSD email : " + e.getMessage() );
+			logger.error("Error while sending ITSD email : " + e.getMessage() );
+		} catch ( MessagingException e) {
+			logger.debug("Error while sending ITSD email : " + e.getMessage() );
+			logger.error("Error while sending ITSD email : " + e.getMessage() );
+		} catch ( ParseException   e) {
+			logger.debug("Error while sending ITSD email : " + e.getMessage() );
+			logger.error("Error while sending ITSD email : " + e.getMessage() );
+		} catch ( NullPointerException e) {
 			logger.debug("Error while sending ITSD email : " + e.getMessage() );
 			logger.error("Error while sending ITSD email : " + e.getMessage() );
 		}

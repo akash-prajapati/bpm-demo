@@ -59,7 +59,7 @@ public class KanaEmailService2 implements WorkItemHandler {
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
 				
 		SOAPConnection soapConnection = null;
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		long mailDelay = 0;
 
 
@@ -129,13 +129,36 @@ public class KanaEmailService2 implements WorkItemHandler {
 			}
 			
 
-		}catch(IOException | SOAPException |EncryptedDocumentException |  InvalidFormatException e){
+		}catch(IOException e){
 		
 			logger.error(e);
 			map.put("resp_msg", "Error while preparing request for KANA Email"				
 					+ "Error is : " + e.toString());
 
-		}finally {
+		}
+		catch( SOAPException   e){
+			
+			logger.error(e);
+			map.put("resp_msg", "Error while preparing request for KANA Email"				
+					+ "Error is : " + e.toString());
+
+		}
+		
+		catch(EncryptedDocumentException  e){
+			
+			logger.error(e);
+			map.put("resp_msg", "Error while preparing request for KANA Email"				
+					+ "Error is : " + e.toString());
+
+		}
+		catch( InvalidFormatException e){
+			
+			logger.error(e);
+			map.put("resp_msg", "Error while preparing request for KANA Email"				
+					+ "Error is : " + e.toString());
+
+		}
+		finally {
 			try {
 				if(soapConnection != null){
 					soapConnection.close();

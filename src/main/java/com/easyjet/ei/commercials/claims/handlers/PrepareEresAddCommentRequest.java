@@ -23,7 +23,7 @@ public class PrepareEresAddCommentRequest implements WorkItemHandler {
 		
 		Map<String, Object> parameters = arg0.getParameters();
 		
-		Map<String, Object> map_values = new HashMap<>();
+		Map<String, Object> map_values = new HashMap<String, Object>();
 		String error_msg = "";
 		Float amount = 0f;
 		String auto_comment = "";

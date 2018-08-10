@@ -52,8 +52,23 @@ public class AESEncryption {
 			//System.out.println(encryptText("Vd12@Jet", getAesKey(Base64.getDecoder().decode("U2VjcmV0UHJvZEBFSTEyMw==".getBytes()))));
 			System.out.println(decryptText("COov08tf7fnc7oDtpaL4fg==", getAesKey(Base64.getDecoder().decode("U2VjcmV0UHJvZEBFSTEyMw==".getBytes()))));
 			
-		} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException
-				| BadPaddingException e) {
+		} catch (InvalidKeyException  e) {
+			//logger.error(message);
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}catch ( NoSuchAlgorithmException e) {
+			//logger.error(message);
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}catch (NoSuchPaddingException  e) {
+			//logger.error(message);
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}catch ( IllegalBlockSizeException e) {
+			//logger.error(message);
+			// TODO Auto-generated catch block
+			//e.printStackTrace();
+		}catch ( BadPaddingException e) {
 			//logger.error(message);
 			// TODO Auto-generated catch block
 			//e.printStackTrace();

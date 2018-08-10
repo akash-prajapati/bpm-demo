@@ -171,7 +171,7 @@ public class PopulateAccertifyCallBody implements WorkItemHandler {
 
 			
 
-				HashMap<String, Object> map = new HashMap<>();
+				HashMap<String, Object> map = new HashMap<String, Object>();
 				map.put("fraudreqJson",fraudreqJson.toJSONString());
 				arg1.completeWorkItem(arg0.getId(), map);
 			} catch (InvalidKeyException e) {

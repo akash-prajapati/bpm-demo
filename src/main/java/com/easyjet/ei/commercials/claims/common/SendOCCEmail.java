@@ -175,7 +175,7 @@ public class SendOCCEmail implements WorkItemHandler {
 		String html_content = null;
 		StringBuilder srStringBuilder = new StringBuilder();
 		String subject = null;
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 
 			fr = new FileReader(email_template_path + "/" + email_template_name);

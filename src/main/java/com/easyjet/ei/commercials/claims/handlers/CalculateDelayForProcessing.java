@@ -26,7 +26,7 @@ public class CalculateDelayForProcessing implements WorkItemHandler{
 
 	@Override
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		try {
 			Claims claim_obj = (Claims) arg0.getParameter("claim_obj");
 			Properties prop_obj = (Properties) arg0.getParameter("prop_obj");

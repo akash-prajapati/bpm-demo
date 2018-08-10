@@ -38,7 +38,7 @@ public class LogClaimProcessExceptions implements WorkItemHandler {
 		
 		try {
 			
-			Map<String, String> error_map = new HashMap<>();			
+			Map<String, String> error_map = new HashMap<String, String>();			
 			error_map = (HashMap<String, String>) arg0.getParameter("error_map");
 			
 			logger.debug("Loggin exception. Processing failed for claim reference " + error_map.get("claim_reference") + "Due to error " + error_map.get("error"));			

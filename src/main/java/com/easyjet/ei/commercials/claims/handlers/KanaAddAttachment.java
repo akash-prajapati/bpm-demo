@@ -59,7 +59,7 @@ public class KanaAddAttachment implements WorkItemHandler {
 	@Override
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
 
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		SOAPMessage soapRequest = null;
 		SOAPConnection soapConnection = null;
 
@@ -111,17 +111,98 @@ public class KanaAddAttachment implements WorkItemHandler {
 
 			}
 
-		} catch (InvalidKeyException | ClassNotFoundException | NoSuchAlgorithmException | NoSuchPaddingException
+		} /*
+		catch (InvalidKeyException | ClassNotFoundException | NoSuchAlgorithmException | NoSuchPaddingException
 				| IllegalBlockSizeException | BadPaddingException | InstantiationException | IllegalAccessException
 				| IOException | UnsupportedOperationException | SOAPException | InterruptedException
 				| ParseException | NullPointerException e) {
 			map.put("return_code", "Error");
-			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "
-					+ soapRequest.toString());
-			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "
-					+ soapRequest.toString());
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
 			logger.error(e);
-		} finally {
+		} 
+		
+		*/
+		
+		
+		catch (InvalidKeyException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch (ClassNotFoundException e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( NoSuchAlgorithmException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( NoSuchPaddingException e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( IllegalBlockSizeException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( BadPaddingException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( InstantiationException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( IllegalAccessException e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch (IOException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( UnsupportedOperationException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( SOAPException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch ( InterruptedException e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch (ParseException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} catch (NullPointerException  e) {
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while sending attachments to KANA. Error is " + e.toString() + " For request "	+ soapRequest.toString());
+			logger.error("Error while sending attachments to KANA. Error is " + e.toString() + " For request "			+ soapRequest.toString());
+			logger.error(e);
+		} 
+		
+		
+		
+		
+		
+		
+		finally {
 			try {
 				if (soapConnection != null)
 					soapConnection.close();

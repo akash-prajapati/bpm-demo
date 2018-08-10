@@ -51,7 +51,7 @@ public class ClaimsBpmsMappingTableUpdate implements WorkItemHandler {
 		}
 		String error_msg = "";
 
-		HashMap<String, Object> map_obj = new HashMap<>();
+		HashMap<String, Object> map_obj = new HashMap<String, Object>();
 
 		try {
 			Connection conn = DBUtils.getDBConnection();

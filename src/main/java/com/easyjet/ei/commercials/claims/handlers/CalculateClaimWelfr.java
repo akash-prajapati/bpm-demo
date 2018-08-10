@@ -40,8 +40,8 @@ public class CalculateClaimWelfr implements WorkItemHandler {
 	@Override
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
 
-		HashMap<String, Object> map = new HashMap<>();
-		HashMap<String, Object> map_params = new HashMap<>();
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		HashMap<String, Object> map_params = new HashMap<String, Object>();
 		
 		//logger.debug("Calculating claim value ******* 1 ");
 		try {

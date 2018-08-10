@@ -99,12 +99,14 @@ public class RestUtils implements WorkItemHandler {
 
 			
 
-		} catch (ClassNotFoundException |  InvalidKeyException | NoSuchAlgorithmException
+		} 
+		
+	/*	catch (ClassNotFoundException |  InvalidKeyException | NoSuchAlgorithmException
 				| NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException | InstantiationException
 				| IllegalAccessException  e) {
 			
 			if(result_map == null){
-				result_map = new HashMap<>();
+				result_map = new HashMap<String, Object>();
 			}
 			result_map.put("Status", -1);
 			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
@@ -113,7 +115,115 @@ public class RestUtils implements WorkItemHandler {
 			
 			logger.error(e);
 			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
-		}catch(IOException  i){
+		}*/
+		
+		catch (ClassNotFoundException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch (  InvalidKeyException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch ( NoSuchAlgorithmException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch ( NoSuchPaddingException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch ( IllegalBlockSizeException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch ( BadPaddingException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch ( InstantiationException e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		catch (IllegalAccessException  e) {
+			
+			if(result_map == null){
+				result_map = new HashMap<String, Object>();
+			}
+			result_map.put("Status", -1);
+			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+			
+			//logger.debug("result_map in catch" + result_map);
+			
+			logger.error(e);
+			logger.error("Error while calling rest service "+ serviceName + ". Error is: " + e.toString());
+		}
+		
+		
+		catch(IOException  i){
 			if(result_map == null){
 				result_map = new HashMap<>();
 			}

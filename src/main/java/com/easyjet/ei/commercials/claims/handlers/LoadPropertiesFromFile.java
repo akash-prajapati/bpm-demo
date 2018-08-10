@@ -25,7 +25,7 @@ public class LoadPropertiesFromFile implements WorkItemHandler {
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
 		
 		String error="";
-		HashMap<String, Object> map_prop = new HashMap<>();
+		HashMap<String, Object> map_prop = new HashMap<String, Object>();
 		try{			
 			
 			Properties props = ReadFromPropertyFile.readfromPropertyFile();		

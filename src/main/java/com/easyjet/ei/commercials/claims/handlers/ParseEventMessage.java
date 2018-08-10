@@ -23,7 +23,7 @@ public class ParseEventMessage implements WorkItemHandler{
 	
 	@Override
 	public void executeWorkItem(WorkItem arg0, WorkItemManager arg1) {
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 		try {
 			String event_message = (String) arg0.getParameter("event_message");

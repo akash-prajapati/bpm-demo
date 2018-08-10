@@ -61,7 +61,7 @@ public class KanaCreateUpdate implements WorkItemHandler {
 
 		SOAPConnection soapConnection = null;
 		String kana_operation = null;
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		SOAPMessage soapRequest = null;
 
 		try {
@@ -140,13 +140,38 @@ public class KanaCreateUpdate implements WorkItemHandler {
 				map.put("resp_msg",
 						"Error while preparing request for Add KANA " + kana_operation + "Error is : " + e.toString());
 			}
-		} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException
-				| BadPaddingException e) {
+		} catch (InvalidKeyException  e) {
 			logger.error(e);
 			map.put("return_code", "Error");
 			map.put("resp_msg", "Error while decrypting bank details. Error is : " + e.toString());
 
-		} finally {
+		} catch ( NoSuchAlgorithmException  e) {
+			logger.error(e);
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while decrypting bank details. Error is : " + e.toString());
+
+		} catch ( NoSuchPaddingException  e) {
+			logger.error(e);
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while decrypting bank details. Error is : " + e.toString());
+
+		} catch (IllegalBlockSizeException  e) {
+			logger.error(e);
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while decrypting bank details. Error is : " + e.toString());
+
+		} catch ( BadPaddingException e) {
+			logger.error(e);
+			map.put("return_code", "Error");
+			map.put("resp_msg", "Error while decrypting bank details. Error is : " + e.toString());
+
+		} 
+		
+		
+		
+		
+		
+		finally {
 			try {
 				if (soapConnection != null) {
 					soapConnection.close();
