@@ -53,7 +53,7 @@ public class ParseEventMessage implements WorkItemHandler{
 	}
 
 	public Map<String, Object> parseClaimSateChangeMessage(String event_message, String action) throws ParseException, IOException{
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 						
 			logger.debug("event_message " + event_message);	
@@ -90,7 +90,7 @@ public class ParseEventMessage implements WorkItemHandler{
 	
 	@SuppressWarnings("unchecked")
 	public Map<String, Object> parsePaymentSateChangeMessage(String event_message, String action) throws ParseException, IOException{
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 						
 		Properties prop_obj = ReadFromPropertyFile.readfromPropertyFile(); 

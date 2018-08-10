@@ -93,7 +93,7 @@ public class GetFlightClassification implements WorkItemHandler {
 		Workbook wb = null;
 		try {
 			inp = new FileInputStream(System.getenv("JBOSS_HOME") + "/DisruptionReason.xlsx");
-			map = new HashMap<>();
+			map = new HashMap<String, Object>();
 			String classification = null;
 			String disruptionReason = null;
 			int ctr = 0;

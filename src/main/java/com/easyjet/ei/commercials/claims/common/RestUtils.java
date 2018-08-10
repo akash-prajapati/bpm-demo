@@ -225,7 +225,7 @@ public class RestUtils implements WorkItemHandler {
 		
 		catch(IOException  i){
 			if(result_map == null){
-				result_map = new HashMap<>();
+				result_map = new HashMap<String, Object>();
 			}
 			result_map.put("Status", 503);
 			result_map.put("StatusMsg", "Error while calling rest service "+ serviceName + ". Error is: " + i.toString());
@@ -381,7 +381,7 @@ public class RestUtils implements WorkItemHandler {
 		
 		try {
 			System.out.println(UUID.randomUUID().toString());
-			Map<String, Object> map = new HashMap<>();
+			Map<String, Object> map = new HashMap<String, Object>();
 			for(int i=0 ; i < 10 ; i++ ){
 				map = new RestUtils().restCall("http://172.26.168.139/commercial-cpm/v1/claims-receipt/getreceipt", "com.easyjet.ei.commercial.claims.pojo.getdocumentfroms3.GetDocumentLink", "POST" ,"{\"documentLink\": \"02e26573d5f5407a9ae8bbdabdc7a976\"}", "getReceipts");
 				//System.out.println(map);

@@ -30,7 +30,7 @@ public class CreditPayment implements WorkItemHandler {
 
 		SOAPConnection soapConnection = null;
 		String kana_operation = null;
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		SOAPMessage soapRequest = null;
 		
 		// Logger log = Logger.getLogger(KanaCreateUpdate.class);
@@ -101,7 +101,7 @@ public class CreditPayment implements WorkItemHandler {
 	public static Map<String, Object> doSOAPCall(SOAPConnection soapConnection, SOAPMessage soapRequest, String url, int count, int retry_count,
 			long retry_interval) {
 
-		Map<String, Object> res_map = new HashMap<>();
+		Map<String, Object> res_map = new HashMap<String, Object>();
 		
 		SOAPMessage soapResponse = null;
 		OutputStream osReq = new ByteArrayOutputStream();
@@ -218,7 +218,7 @@ public class CreditPayment implements WorkItemHandler {
 	public static Map<String, Object> checkReturnCode(SOAPMessage soapResponse) {
 
 		// System.out.println("Inside checkReturnCode");
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		String return_message="";
 		String message_code="";
 		String payment_id="";
@@ -423,7 +423,7 @@ public class CreditPayment implements WorkItemHandler {
 		
 		SOAPConnection soapConnection = null;
 		String kana_operation = null;
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		SOAPMessage soapRequest = null;
 		
 		Properties props = ReadFromPropertyFile.readfromPropertyFile();

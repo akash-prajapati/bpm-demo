@@ -225,7 +225,7 @@ public class KanaAddAttachment implements WorkItemHandler {
 	public static Map<String, Object> doSOAPCall(SOAPConnection soapConnection, SOAPMessage soapRequest, String url,
 			int count, int retry_count, long retry_interval, int case_id, Properties props) {
 
-		Map<String, Object> res_map = new HashMap<>();
+		Map<String, Object> res_map = new HashMap<String, Object>();
 
 		SOAPMessage soapResponse = null;
 		OutputStream osReq = new ByteArrayOutputStream();
@@ -280,23 +280,153 @@ public class KanaAddAttachment implements WorkItemHandler {
 					KanaCreateUpdate.kanaNoteUpdateOnServiceFailure(kana_note, Integer.toString(case_id), props);
 
 				}
-			} catch (InterruptedException | IOException | InvalidKeyException | UnsupportedOperationException
+			}/* catch (InterruptedException | IOException | InvalidKeyException | UnsupportedOperationException
 					| NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException
 					| BadPaddingException | ParseException | SOAPException e1) {
 				logger.error(e1);
 				res_map.put("return_code", "Error");
 				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
 				res_map.put("request", osReq.toString());
+			}*/
+			
+			catch (InterruptedException  e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( IOException  e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( InvalidKeyException e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( UnsupportedOperationException e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( NoSuchAlgorithmException e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch (  NoSuchPaddingException  e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( IllegalBlockSizeException e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( BadPaddingException  e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( ParseException  e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+			}
+			catch ( SOAPException e1) {
+				logger.error(e1);
+				res_map.put("return_code", "Error");
+				res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
 			}
 
-		} catch (InterruptedException | IOException | InvalidKeyException | UnsupportedOperationException
+		} /*catch (InterruptedException | IOException | InvalidKeyException | UnsupportedOperationException
 				| NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException | BadPaddingException
 				| ParseException | ParserConfigurationException | SAXException e) {
 			logger.error(e);
 			res_map.put("return_code", "Error");
 			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
 			res_map.put("request", osReq.toString());
-		} finally {
+		} */
+		
+		catch (InterruptedException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  IOException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  InvalidKeyException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch ( UnsupportedOperationException e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch ( NoSuchAlgorithmException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  NoSuchPaddingException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  IllegalBlockSizeException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  BadPaddingException e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch (  ParseException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch ( ParserConfigurationException  e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		catch ( SAXException e) {
+			logger.error(e);
+			res_map.put("return_code", "Error");
+			res_map.put("resp_msg", "Error while retrying for KANA Add-Attachment" + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		}
+		
+		finally {
 
 			try {
 				osReq.close();
@@ -320,7 +450,7 @@ public class KanaAddAttachment implements WorkItemHandler {
 		Map<String, Object> map;
 		ByteArrayOutputStream stream = null;
 		try {
-			map = new HashMap<>();
+			map = new HashMap<String, Object>();
 			String return_code = null;
 			String resp_msg = null;
 			stream = new ByteArrayOutputStream();

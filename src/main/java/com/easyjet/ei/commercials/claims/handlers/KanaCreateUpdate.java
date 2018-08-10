@@ -192,7 +192,7 @@ public class KanaCreateUpdate implements WorkItemHandler {
 			String kana_state, String kana_note, SOAPMessage soapRequest, String url, int count, int retry_count,
 			long retry_interval) {
 
-		Map<String, Object> res_map = new HashMap<>();
+		Map<String, Object> res_map = new HashMap<String, Object>();
 
 		SOAPMessage soapResponse = null;
 		OutputStream osReq = new ByteArrayOutputStream();
@@ -243,11 +243,27 @@ public class KanaCreateUpdate implements WorkItemHandler {
 
 			}
 
-		} catch (InterruptedException | SAXException  | IOException | ParserConfigurationException e) {
+		} catch (InterruptedException   e) {
 			logger.error(e);
 			res_map.put("resp_msg", "Error while retrying for KANA " + kana_operation + ". Error is :" + e.toString());
 			res_map.put("request", osReq.toString());
-		} finally {
+		} 
+		
+		catch ( SAXException    e) {
+			logger.error(e);
+			res_map.put("resp_msg", "Error while retrying for KANA " + kana_operation + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		} catch (IOException  e) {
+			logger.error(e);
+			res_map.put("resp_msg", "Error while retrying for KANA " + kana_operation + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		} catch ( ParserConfigurationException e) {
+			logger.error(e);
+			res_map.put("resp_msg", "Error while retrying for KANA " + kana_operation + ". Error is :" + e.toString());
+			res_map.put("request", osReq.toString());
+		} 
+		
+		finally {
 
 			try {
 				if (osReq != null) {
@@ -271,7 +287,7 @@ public class KanaCreateUpdate implements WorkItemHandler {
 
 	public static Map<String, Object> checkReturnCode(SOAPMessage soapResponse, String kana_operation) throws SOAPException, IOException, ParserConfigurationException, SAXException {
 
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 
 			String return_code = null;

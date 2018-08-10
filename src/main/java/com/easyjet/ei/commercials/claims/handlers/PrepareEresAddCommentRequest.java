@@ -274,7 +274,7 @@ public class PrepareEresAddCommentRequest implements WorkItemHandler {
 			
 			String comment = stringBuffer.toString();
 			
-			Map<String, Object> map = new HashMap<>();
+			Map<String, Object> map = new HashMap<String, Object>();
 			map.put("comment", comment);
 			map.put("comment_type", comment_type);
 			map.put("ej_comment_type", ej_comment_type);

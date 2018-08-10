@@ -216,7 +216,7 @@ public class KanaEmailService2 implements WorkItemHandler {
 	public static Map<String, Object> doSOAPCall(SOAPConnection soapConnection, SOAPMessage soapRequest,String url,int count, int retry_count,
 			long retry_interval, Map<String, Object> return_map){
 
-		Map<String, Object> res_map = new HashMap<>();
+		Map<String, Object> res_map = new HashMap<String, Object>();
 
 
 		SOAPMessage soapResponse = null;
@@ -280,7 +280,7 @@ public class KanaEmailService2 implements WorkItemHandler {
 				res_map.put("request", osReq.toString());
 			}
 		}
-		catch (IOException | ParserConfigurationException | SAXException | InterruptedException e) {
+		/*catch (IOException | ParserConfigurationException | SAXException | InterruptedException e) {
 			logger.error(e);
 			System.out.println("565656 " + e.getMessage());
 		
@@ -290,7 +290,54 @@ public class KanaEmailService2 implements WorkItemHandler {
 				res_map.put("request", osReq.toString());
 		
 
-		}finally{
+		}*/
+		
+		catch (IOException  e) {
+			logger.error(e);
+			System.out.println("565656 " + e.getMessage());
+		
+				logger.error(e);
+				res_map.put("resp_msg",
+						"Error while retrying for KANA Email" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+		
+
+		}
+		catch ( ParserConfigurationException  e) {
+			logger.error(e);
+			System.out.println("565656 " + e.getMessage());
+		
+				logger.error(e);
+				res_map.put("resp_msg",
+						"Error while retrying for KANA Email" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+		
+
+		}
+		catch ( SAXException  e) {
+			logger.error(e);
+			System.out.println("565656 " + e.getMessage());
+		
+				logger.error(e);
+				res_map.put("resp_msg",
+						"Error while retrying for KANA Email" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+		
+
+		}
+		catch ( InterruptedException e) {
+			logger.error(e);
+			System.out.println("565656 " + e.getMessage());
+		
+				logger.error(e);
+				res_map.put("resp_msg",
+						"Error while retrying for KANA Email" + ". Error is :" + e.toString());
+				res_map.put("request", osReq.toString());
+		
+
+		}
+		
+		finally{
 
 			try {
 				osReq.close();
@@ -313,7 +360,7 @@ public class KanaEmailService2 implements WorkItemHandler {
 
 	public static Map<String, Object> checkReturnCode(SOAPMessage soapResponse) throws SOAPException, IOException, ParserConfigurationException, SAXException {
 
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Object> map = new HashMap<String, Object>();
 		
 
 			String return_code = null;
@@ -466,7 +513,7 @@ public static void main(String args[]){
 		//book_obj.getBookerInfo().setEmailAddress("test@test.com");
 	
 		NameValuePairList list = new NameValuePairList();
-		List<NameValuePair> list1 = new ArrayList<>();
+		List<NameValuePair> list1 = new ArrayList<NameValuePair>();
 		
 		list.setNameValuePair(list1);
 		
@@ -498,7 +545,7 @@ public static void main(String args[]){
 			headers.addHeader("SOAPAction",  "EmailServiceService#SendEmail");
 		    soapMessage.saveChanges();
 		
-		    Map<String, Object> map = new HashMap<>();
+		    Map<String, Object> map = new HashMap<String, Object>();
 		
 		
 		System.out.println(" 98989898989898 "+doSOAPCall(soapConnection, soapRequest, "http://localhost:8899/sendEmail", 1, 3, 0,map));
