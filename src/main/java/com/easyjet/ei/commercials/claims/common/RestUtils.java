@@ -379,7 +379,7 @@ public class RestUtils implements WorkItemHandler {
 	
 	public static void main(String args[]){
 		
-		try {
+		/*try {
 			System.out.println(UUID.randomUUID().toString());
 			Map<String, Object> map = new HashMap<String, Object>();
 			for(int i=0 ; i < 10 ; i++ ){
@@ -393,7 +393,7 @@ public class RestUtils implements WorkItemHandler {
 				| IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 	}
 
 }
